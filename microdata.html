@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Microdata</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a tabindex=0 href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li><a href="../oblig2/index.html">Oblig 2</a></li>
+            <li><a href="../oblig3/index.html">Oblig 3</a></li>
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a tabindex=0>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a tabindex=0>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a tabindex=0>Oblig 4</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+            <li class="last-hover current-page"><a href="microdata.html">Microdata</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ol>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <span>></span>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Oblig 4</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <span>></span>
+          <li id="current-page-breadcrumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="microdata.html" itemprop="item"><span itemprop="name">Microdata</span></a>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Microdata</h2>
+        <p>
+          Microdata allows search engines to give a more accurate, relevant, and overall improved user experience. By implementing microdata (or other forms of structured data 
+          markup such as JSON-LD) we can further clarify what exactly sections of our web page is comprised of. Since everyone's code is different, search engines sometimes have 
+          problems with interpreting data, and by marking a breadcrumb list as such (instead of an additional navigation bar, for example), we can give additional information to the 
+          likes of google and co.
+        </p>
+        <p>
+          Web pages that are more specialised such as sites containing recipes and how-to tutorials may wish to make use of structured data to appear on a wider variety of search 
+          results. If someone, for example, searched 'pizza'. How should a search engine interpret this? That person may wish to order pizza (in which case, rich results could 
+          display local pizza restaurants), or maybe they are interested in making it themselves (a recipe site would be more useful in this case). The search could also be interpreted 
+          as somoene who merely wanted to know about the history of pizza, or what pizza is. Rich results making use of structured data can supply a variety of information on the same 
+          search result, thus encompassing a wide variety of results about such a vague search.
+        </p>
+        <h3>Examples of Rich Results and Microdata</h3>
+        <figure class="article-figure">
+          <a href="res/breadcrumb-microdata.jpg"><img class="fig-img" src="res/breadcrumb-microdata.jpg" alt="A screenshot showing a test of my structured data using Google's 'Rich Results Test'"></a>
+          <figcaption>
+            After implementing my own structured data with microdata, I proceeded to test my code using Google's 'Rich Results Test'. I had a few errors at first, but adjusted it 
+            to the image above, resulting in no errors.
+          </figcaption>
+        </figure>
+        <figure class="article-figure">
+          <a href="res/breadcrumb-example.jpg"><img class="fig-img" src="res/breadcrumb-example.jpg" alt="A screenshot of how Google interprets breadcrumb microdata"></a>
+          <figcaption>
+            This image shows how Google interprets breadcrumb microdata on a results page, and how it can supply additional information about the structural layout of the website overall.
+          </figcaption>
+        </figure>
+        <figure class="article-figure">
+          <a href="res/breadcrumb-examples.jpg"><img class="fig-img" src="res/breadcrumb-examples.jpg" alt="Five examples of rich results generated using microdata or other forms of structured data"></a>
+          <figcaption>
+            Here are 5 examples of rich results generated using microdata relating to the search term 'pizza'. There's a 'local business' result in the top left containing opening times, user reviews, and 
+            location. An image 'carousel' is displayed in the bottom left. A 'recipe' rich result is displayed in the top right, along with a summary of ingredients and user ratings. A 'frequently 
+            asked questions' rich result is displayed in the middle right. Finally, a 'video' result is displayed in the bottom right along with a text summary of the video, and video segments.
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -18,13 +18,15 @@
       <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
       <ul id="ham" class="top-menu">
         <li class="dropdown-point">
-          <a href="index.html">Home</a>
+          <a tabindex=0 href="index.html">Home</a>
           <ul class="dropdown-main">
+            <li><a href="../oblig2/index.html">Oblig 2</a></li>
+            <li><a href="../oblig3/index.html">Oblig 3</a></li>
             <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
           </ul>
         </li>
         <li class="dropdown-point" onclick="mobileMenuSub()">
-          <a>Oblig 2</a>
+          <a tabindex=0>Oblig 2</a>
           <ul id="ham-sub" class="dropdown-main">
             <li><a href="html-forms.html">HTML Forms</a></li>
             <li><a href="media-types.html">Media Types</a></li>
@@ -32,7 +34,7 @@
           </ul>
         </li>
         <li class="dropdown-point" onclick="mobileMenuSub2()">
-          <a>Oblig 3</a>
+          <a tabindex=0>Oblig 3</a>
           <ul id="ham-sub2" class="dropdown-main">
             <li><a href="audio-video.html">Audio/Video</a></li>
             <li><a href="responsive-design.html">Responsive Design</a></li>
@@ -40,23 +42,30 @@
           </ul>
         </li>
         <li class="dropdown-point" onclick="mobileMenuSub3()">
-          <a>Example</a>
+          <a tabindex=0>Oblig 4</a>
           <ul id="ham-sub3" class="dropdown-main">
-            <li><a href="#">Example 1</a></li>
-            <li><a href="#">Example 2</a></li>
-            <li class="last-hover"><a href="#">Example 3</a></li>
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+            <li class="last-hover"><a href="microdata.html">Microdata</a></li>
           </ul>
         </li>
       </ul>
     </nav>
     <main id="article-column">
-      <nav id="breadcrumb" aria-label="breadcrumbs">
+      <nav id="breadcrumb" aria-label="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <p>></p>
-          <li><a>Oblig 3</a></li>
-          <p>></p>
-          <li><a id="current-page-breadcrumb" href="sass.html">SASS</a></li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <span>></span>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Oblig 3</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <span>></span>
+          <li id="current-page-breadcrumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="sass.html" itemprop="item"><span itemprop="name">SASS</span></a>
+            <meta itemprop="position" content="3" />
+          </li>
         </ol>
       </nav>
       <article>
