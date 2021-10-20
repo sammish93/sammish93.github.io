@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1000px) {
+
+    #top-btn {
+      display: none;
+    }
+}
+
+#top-btn {
+  position: fixed;
+  bottom: 0;
+  right: 2em;
+  padding: 1em;
+  border-radius: 10px 10px 0 0;
+  background-color: $pumpkin;
+  color: $milk;
+  box-shadow: 0 -4px 4px -4px $light-brown;
+  animation-name: buttonslidein;
+  animation-duration: 0.5s;
+}
+
+@keyframes buttonslidein {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

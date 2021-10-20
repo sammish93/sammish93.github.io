@@ -1,0 +1,30 @@
+#breadcrumb {
+    
+    flex-basis: 100%;
+
+    ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+        p {
+            padding-right: 0.4em;
+        }
+        
+        li {
+            padding-right: 0.4em;
+
+            a {
+                padding: 0.3em;
+                border-radius: 5px;
+                background-color: $latte;
+            }
+
+            #current-page-breadcrumb {
+                background-color: $latte-lighter;
+            }
+        }
+    }
+}

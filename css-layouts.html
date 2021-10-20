@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>CSS Layouts</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover current-page"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 2</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="css-layouts.html">CSS Layouts</a></li>
+        </ol>
+      </nav>
+      <article class="box-1">
+        <h2>CSS Layouts</h2>
+        <p>
+          There are many ways of using CSS to create a layout comprised of many different sections of a website. Originally, HTML was used exclusively for both structure and 
+          design, but as HTML evolved came a reevaluation of semantic markup, and a discouragement of overexcessive usage &lt;div&gt; tags and unnecessary &lt;br&gt; tags, 
+          in favour of moving layout and aesthetics towards CSS in a push towards responsive design and inclusive HTML markup for ease of use with screen readers and search engines.
+        </p>
+        <h3>Previous Methods</h3>
+        <p>
+          Previously, layout was done using anchors such as floats, clears,  and 'top', 'left' etc. properties. These still have their uses, but a website under construction 
+          right now should steer clear of designing their layout using purely these properties. These properties are great as long as your website is static, and every visitor 
+          uses the same monitor, font size, and browser. The problems arise with when the site is accessed using a resolution of significant difference, or font size is altered. 
+          Properties such as float also have their issues which can be frustrating to fix, and cause problems to the whole site if every item is relative to another. One 
+          example is a &lt;div&gt; collapse, which can arise because of several reasons. One of the most common is when every child element in a container is floated - The parent 
+          container collapses on itself and is no longer visible. This can be solved using the width: 100%; and clear: both; declarations, but this is a clunky and unintuitive 
+          way to build a website, and adds a lot of excess code to a CSS stylesheet.
+        </p>
+        <h3>Flexbox</h3>
+        <p>
+          According to Coyier (2021), he flexbox is a suitable choice when creating layouts on a small scale (such as a specific container). It is dynamic, and changes based on the 
+          size of the container, which can also lead to a more responsive site. Flexboxes can be set using the display: flex; declaration, and can be further customised with 
+          the 'flex-wrap' property, 'justify-content', 'gap', and 'align-content/items'. Child items can also be reordered without editing the HTML code, and how much flexibility 
+          a specific item has can be stated using the 'flex-grow/shrink/basis' properties. There are, however, limitations, and examples of these are an inability to resize and 
+          rotate items, and this is often achieved using javascript.
+        </p>
+      </article>
+      <figure class="article-figure">
+        <a href="res/wireframe.png"><img class="fig-img" src="res/wireframe.png" alt="A wireframe illustration of my website design"></a>
+        <figcaption>
+          This is a wireframe illustration of my website. The orange lines illustrate grid columns and rows, and flex items are shown inside a flexbox. Grids and Flexboxes 
+          can work together very well!
+        </figcaption>
+      </figure>
+      <article class="box-2">
+        <h3>Grid</h3>
+        <p>
+          Grids are a great choice for specifically creating areas, or grid containers, on the screen with designations, and then designating items to specific grid cells. As 
+          seen before, previous methods were merely patching up problems that arose from the shortcomings of CSS to easily create responsive websites, as House (2021) 
+          states <q>Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites.</q>
+          The grid system is intuitive, and was specifically designed to create layouts that are responsive and fluid, and can be easily changed depending on @media devices 
+          accessing them. Grids are created firstly by declaring the 'grid-template-rows/columns', and 'grid-template-areas' can be used to give each cell a name. Grid cells 
+          declared using the 'grid-template-rows/columns' property can be given a variation of values such as pixels (px), fractions (fr), ems/rems, and auto. The 
+          'column/row-gap' properties can be used to space grid items apart from each other. Each child item can then be assigned a 'grid-area', and will be automatically 
+          placed there if the area is a rectangle.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Search Engine Optimisation</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li class="current-page"><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 4</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="seo.html">Search Engine Optimisation</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Search Engine Optimisation</h2>
+        <h3>Audio</h3>
+        <p>
+          With HTML5 came the introduction of tags designed to free the web developer of their previous reliance on plugins and 
+          secondary websites. One of these elements is &lt;audio&gt;. The &lt;audio&gt; tag allows a web developer to inherently embed 
+          audio files hosted on their own server. This new element gives the developer a wide range of properties to be taken advantage 
+          of such as <i>'controls'</i> giving the embedded player more GUI options for the visitor of the site to use. Other properties 
+          include <i>'preload'</i>, allowing the audio file to load during the initial loading of the page, and <i>'autoplay'</i>. 
+          Autoplay has been widely used in the past but is now, however, looked down upon and viewed as little more than a nuisance 
+          apart from in very specific circumstances.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

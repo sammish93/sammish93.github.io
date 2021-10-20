@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>SASS</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover current-page"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 3</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="sass.html">SASS</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>SASS</h2>
+        <p>
+          SASS is an interpreted language based on CSS and reliant on Ruby to compile into a CSS based format. SASS is used to widen the 
+          possibilities of CSS and contributes to a more streamlined working environment which can save a lot of time, while promoting 
+          structure and organisation which can be very beneficial as a project grows.
+        </p>
+        <p>
+          SASS projects comprise of a main .scss file (or .sass using whitespace indentation instead of curvy brackets), and partitions 
+          formatted with an underscore before the file name (_example.scss). Partitions are split up into different modules at the 
+          developers choosing, and are then imported into the main .scss file. A processing program is then used to interpret (compile) 
+          SASS into one CSS file, which can then be linked to a webpage.
+        </p>
+        <p>
+          Benefits of SASS include variables, nesting, mixins, and inheritence. Variables work like many other programming languages and 
+          can be assigned a value and then used throughout the SASS code.
+        </p>
+        <dl>
+          <dt>
+            Variables
+          </dt>
+          <dd>
+            One example is to assign a hex or rgb value to a variable. The benefit of this is that that variable can then be used throughout the 
+            site during the design phase, and the value of the variable can then be changed easily by editing the value of the variable.
+          </dd>
+          <dt>
+            Nesting
+          </dt>
+          <dd>
+            Nesting results in code that is easier to write, and cleans up code so that it is easier to read.
+          </dd>
+          <dt>
+            Mixins
+          </dt>
+          <dd>
+            Mixins are similar to functions in some other programming languages, and parameters can be set, with the mixin using arguments 
+            presented. Mixins also cut down on repetitive code, and make it easier to write. An example of a mixin is creating a border mixin with 
+            the syntax @mixin format($padding, $margin, $font-size) {padding: $padding; margin: $margin; font-size: $font-size;}.
+          </dd>
+          <dt>
+            Inheritence
+          </dt>
+          <dd>
+            Inheritences can be created in a placeholder %class and properties and values can be given similar to a normal CSS selector declaration, and then 
+            inherited by another selector using the syntax @extend &lt;selector&gt; as a declaration. Blocks of CSS declarations can also be inherited from 
+            practically any desired selector, and not restricted to only placeholder classes.
+          </dd>
+          <dt>
+            Structure
+          </dt>
+          <dd>
+            Perhaps the most beneficial thing about working with SASS is the ability to create partials and import them into a main .scss sheet, thus resulting in 
+            cleaner code that is easier to read and keep track of. Below is a link to my main.scss sheet along with a screenshot on how my folders are structured.
+          </dd>
+        </dl>
+        <section id="sass-btn">
+          <a class="btn" href="scss/main.scss" target="_blank">
+            <span class="search-icon">
+              <i class="fas fa-search"></i>
+            </span>
+            <span class="search-text">
+              My SASS Sheet
+            </span>
+          </a>
+        </section>
+        <a href="res/sass-structure.jpg"><img class="img-sass" src="res/sass-structure.jpg" alt="A screenshot on how my website is structures"></a>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

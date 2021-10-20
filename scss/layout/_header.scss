@@ -1,0 +1,14 @@
+#page-header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: $milk;
+    background-image: url(../res/autumn-header.jpg);   /* (Eberly, 2017) https://unsplash.com/photos/yuiJO6bvHi4 */
+    background-color: $dark-brown;
+    background-position: top right;
+    box-shadow: 0 4px 4px -4px $light-brown;
+}

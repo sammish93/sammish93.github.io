@@ -1,0 +1,25 @@
+fieldset {
+    width: 300px;
+    border-radius: 10px;
+    border-color: $pumpkin;
+}
+  
+input, textarea {
+    margin: 0.5em 0;
+}
+
+legend {
+    background-color: $pumpkin;
+    color: $dark-brown;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 2px solid $pumpkin;
+    padding: 0.2em;
+    color: $dark-brown;
+    background-color: $milk;
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 10px 10px 0 0;
+    background-color: $pumpkin-lighter;
+    color: $dark-brown;
+    box-shadow: 0 -1em 4em -1em $milk;
+      
+    p {
+      margin: 1em;
+    }
+}

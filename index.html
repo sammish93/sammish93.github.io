@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="html, css, media-types, responsive-design, sass">
+  <meta name="description" content="A site designed during a webutvikling course at Høgskolen i Østfold">
+  <meta name="author" content="Samuele Carlo Davies">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Webutvikling</title>
+</head>
+<body>
+  <div id="container-page-main">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a tabindex=0 href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li><a href="../oblig2/index.html">Oblig 2</a></li>
+            <li><a href="../oblig3/index.html">Oblig 3</a></li>
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a tabindex=0>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a tabindex=0>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a tabindex=0>Oblig 4</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li class="last-hover"><a href="#">Microdata</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-column">
+      <article>
+        <h2>Articles</h2>
+        <h3>HTML Forms</h3>
+        <p>
+          Forms are a handy way of making your website more interactive. They can be beneficial for both the visitor of the site, and the web designer.
+          The basic premise behind a form is to collect data from the visitor via user input.
+        </p>
+        <a class="article-btn" href="html-forms.html">Read more about HTML Forms</a>
+      </article>
+      <article>
+        <h3>Media Types</h3>
+        <p>
+          Nowadays, a website can be accessed through a variety of different media types. In the early 90s it was typical to access a website through a desktop 
+          computer, and while that's still the case, technology has progressed significantly in the context of ways we access websites. Screens can range 
+          drastically in size and resolution; smart watches, to mobile phones, to tablets, to laptop and desktop screens, to 50+ inch TVs.
+        </p>
+        <a class="article-btn" href="media-types.html">Read more about Media Types</a>
+      </article>
+      <article>
+        <h3>CSS Layouts</h3>
+        <p>
+          There are many ways of using CSS to create a layout comprised of many different sections of a website. Originally, HTML was used exclusively for both structure and 
+          design, but as HTML evolved came a reevaluation of semantic markup, and a discouragement of overexcessive usage &lt;div&gt; tags and unnecessary &lt;br&gt; tags
+        </p>
+        <a class="article-btn" href="css-layouts.html">Read more about CSS Layouts</a>
+      </article>
+      <article>
+        <h3>Audio/Video</h3>
+        <p>
+          With HTML5 came the introduction of tags designed to free the web developer of their previous reliance on plugins and 
+          secondary websites. These elements are &lt;audio&gt; and &lt;video&gt;.
+        </p>
+        <a class="article-btn" href="audio-video.html">Read more about Audio/Video</a>
+      </article>
+      <article>
+        <h3>Responsive Design</h3>
+        <p>
+          When considering a responsive website it is important to take advantage of media types. Media queries are also a great solution to a world saturated with an almost 
+          infinite number of devices with their own screen dimensions and resolutions. Sites are increasingly being designed with the perspective that font size shouldn't be 
+          imposed on the visitor, and a responsive site  should cater to those who wish to increase or decrease font sizes without breaking elements or layouts.
+        </p>
+        <a class="article-btn" href="responsive-design.html">Read more about Responsive Design</a>
+      </article>
+      <article>
+        <h3>SASS</h3>
+        <p>
+          SASS is an interpreted language based on CSS and reliant on Ruby to compile into a CSS based format. SASS is used to widen the 
+          possibilities of CSS and contributes to a more streamlined working environment which can save a lot of time, while promoting 
+          structure and organisation which can be very beneficial as a project grows.
+        </p>
+        <a class="article-btn" href="sass.html">Read more about SASS</a>
+      </article>
+      <article>
+        <h3>SEO</h3>
+        <p>
+          fdsfsdf
+        </p>
+        <a class="article-btn" href="seo.html">Read more about SEO</a>
+      </article>
+      <article>
+        <h3>Accessibility</h3>
+        <p>
+          fdsfsdf
+        </p>
+        <a class="article-btn" href="accessibility.html">Read more about Accessibility</a>
+      </article>
+      <article>
+        <h3>Social Media</h3>
+        <p>
+          fdsfsdf
+        </p>
+        <a class="article-btn" href="sass.html">Read more about Social Media</a>
+      </article>
+      <article>
+        <h3>Microdata</h3>
+        <p>
+          fdsfsdf
+        </p>
+        <a class="article-btn" href="sass.html">Read more about Microdata</a>
+      </article>
+    </main>
+    <aside id="aside-column">
+      <h4>Site contents</h4>
+      <section id="video">
+        <video id="aside-video" preload="none" controls>
+          <source src="res/video-aside.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      <section id="rel-article">
+          <h5>Useful Links:</h5>
+        <ul id="aside-links">
+          <li><a href="https://www.codecademy.com/learn/learn-responsive-design/modules/learn-responsive-design-module/cheatsheet" target="blank"><i class="fas fa-link"></i> Responsive Design Cheatsheet</a></li>
+          <li><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/" target="blank"><i class="fas fa-link"></i> Responsive and Fluid Typography</a></li>
+          <li><a href="https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/" target="blank"><i class="fas fa-link"></i> Why You Don't Need Specific Breakpoints</a></li>
+          <li><a href="https://www.w3schools.com/html/html_responsive.asp" target="blank"><i class="fas fa-link"></i> W3 Schools - Responsive Web Design</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="blank"><i class="fas fa-link"></i> Mozilla - Responsive Design</a></li>
+        </ul>
+      </section>
+      <section id="google-btn">
+        <a class="btn" href="https://www.google.com/search?q=html+forms" target="_blank">
+          <span class="search-icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="search-text">
+            Search for HTML Forms
+          </span>
+        </a>
+      </section>
+    </aside>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

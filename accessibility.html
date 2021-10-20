@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Accessibility</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li class="current-page"><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 4</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="accessibility.html">Accessibility</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Accessibility</h2>
+        <p>
+          I encountered a few warnings when I submitted my website to a web accessibility evaluation tool, along 
+          with some contrast errors. I changed the text colour on several of my buttons to a much darker colour to 
+          increase contrast. I also changed the text-decoration property on my &lt;a&gt; tags to be underlined. I 
+          then changed the button text to give more information about where the hyperlinks lead to, giving them 
+          context when separated from the rest of the body of text. Furthermore, I restructured my headings so that 
+          no page skipped heading levels.
+        </p>
+        <p>
+          Finally, the biggest issue I had with my site was the inability to fully navigate via tab. Without going into 
+          specific detail about my own code, I managed to solve this problem with slight additions. Firstly, I included 
+          the property tabindex=0 to my anchor points. This allowed me to target the elements in the first level of my 
+          navigation bar, but since my nav bar made use of :hover elements and javascript, I still encountered problems. 
+          I managed to activate the dropdown menu on tab by using the pseudoclass :focus, but I still had a problem - 
+          I couldn't tab through my dropdown menu. After a bit of trial and error I managed to get it working with an 
+          additional pseudoclass - :focus-within. This finally allowed me to interact with the dropdown menu when the 
+          initial anchor point was focused; a tab-targetting equivalent to a mouseover :hover. The only problem with this 
+          fix is that it doesn't work in mobile mode. However, I expect that the amount of people accessing the website, 
+          while possible, with both a mobile device and a keyboard is negligible.
+        </p>
+        <p>
+          Below is a link to my website before it was fully adjusted for accessibility.
+        </p>
+        <a class="article-btn" href="../oblig3/index.html">Link to Oblig 3</a>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Reference List</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover current-page"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <article>
+        <h2>Reference List</h2>
+        <p>
+          Coyier, C. (2015). <i>Font Size Idea: px at the Root, rem for Components, em for Text Elements.</i> CSS-Tricks. <a href="https://css-tricks.com/rems-ems/">https://css-tricks.com/rems-ems/</a>
+        </p>
+        <p>
+          Coyier, C. (2021). <i>A Complete Guide to Flexbox.</i> CSS-Tricks. <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+        </p>
+        <p>
+          Duckett, J. (2011). <i>HTML & CSS: design and build websites.</i> John Wiley & Sons, Inc.
+        </p>
+        <p>
+          Eberly, T. (2017). <i>Fall Color shines in the afternoon sun</i> [Photograph]. Unsplash. <a href="https://unsplash.com/photos/yuiJO6bvHi4">https://unsplash.com/photos/yuiJO6bvHi4</a>
+        </p>
+        <p>
+          House, C. (2021). <i>A Complete Guide to Grid.</i> CSS-Tricks. <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+        </p>
+        <p>
+          Krossing, D. [Dani Krossing] (2017, November 27). <i>16: How to Create HTML5 Videos and Embed Videos | Learn HTML and CSS | HTML Tutorial | Basics of CSS.</i> [Video] Youtube. <a href="https://www.youtube.com/watch?v=OOy764mDtiA">https://www.youtube.com/watch?v=OOy764mDtiA</a>
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

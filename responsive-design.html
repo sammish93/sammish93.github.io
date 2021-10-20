@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Responsive Design</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling Oblig 2</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li class="current-page"><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 3</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="responsive-design.html">Responsive Design</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Responsive Design</h2>
+        <h3>Media Types</h3>
+        <p>
+          When considering a responsive website it is important to take advantage of media types. The three main media types we 
+          use nowadays are screen, print, and speech. Screens range from smart watches, mobile phones, tablets, desktop screens, and 
+          50+ inch TVs. Print refers to printed media such as books and magazines, but is increasingly being incorporated in dynamic and 
+          responsive devices such as e-book readers. Speech refers to screen readers and devices aimed at helping those with physical or 
+          visual impairments access the website.
+        </p>
+        <a class="article-btn" href="media-types.html">Read more about Media Types</a>
+        <h3>Media Queries</h3>
+        <p>
+          Media queries are a great solution to a world saturated with an almost infinite number of devices with their own screen 
+          dimensions and resolutions. The rise of smart phones and other devices able to access the world wide web has made it a 
+          necessity to design websies to respond to different media and screens, and even the most competant web developer would find it 
+          a challenge to create bespoke sites for every single device.
+        </p>
+        <p>
+          How exactly does a developer account for such a diverse array of resolutions? Breakpoints. With media queries, we can specify a 
+          range of pixel resolutions. The syntax @media only screen and (max-width: 600px) {property: value;} can be used to create specific 
+          CSS declarations that only apply to screens with a maximum width of 600 pixels i.e. a mobile-friendly version of the web page. The 
+          query is flexible enough that several more breakpoints can be declared and, in the case of this site, they were min-width: 600px; and 
+          min-width: 1000px;. This means that this specific web page has three different breakpoints. A mobile-friendly layout, a layout for 
+          older 4:3 ratio monitors (or browsers that are downsized, or snapped to cover half of the screen), and widescreen monitors.
+        </p>
+        <figure class="article-figure">
+          <a href="res/responsive-scaling.jpg"><img class="fig-img" src="res/responsive-scaling.jpg" alt="A comparison of the three layouts used on this website"></a>
+          <figcaption>
+            Three examples of the different responsive layouts on this site. Widescreen, standard, and mobile. The breakpoints are up to 600 pixels, between 600 and 1000 pixels, 
+            and greater than 1000 pixels. (Note that the navbar changes into a burger menu in mobile, and the 'return to the top of the page' button only appears in widescreen.)
+          </figcaption>
+        </figure>
+        <h3>Flexible Sizing</h3>
+        <p>
+          Sites are increasingly being designed with the perspective that font size shouldn't be imposed on the visitor, and a responsive site 
+          should cater to those who wish to increase or decrease font sizes without breaking elements or layouts. Dynamic layouts covered previously 
+          such as flexbox and grid contribute massively to a responsive site, but the developer can also make use out of measurements such as 
+          ems and rems (root em), viewport height and widths (vh and vw), and fractions (fr). I have made use of a modular layout conceptualised by
+          Chris Coyier in 2015, whereby the html element is given a default font size value (16px), and layout elements such as the navigation bar, 
+          main, and aside are then given values in root ems (relating to the default value stated earlier). Headers and inline typography elements are 
+          then given values in ems, which are based off their parent elements (stated in rems). What does this result in? It results in every single 
+          element on the site able to resize if the default html font size is changed from 16px. 
+        </p>
+        <figure class="article-figure">
+          <a href="res/type-scaling.jpg"><img class="fig-img" src="res/type-scaling.jpg" alt="A comparison of two different font sizes on this website"></a>
+          <figcaption>
+            An example of this site scaling with the default font size. The image on the left uses 16 pixels, and the right uses 22 pixels.
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

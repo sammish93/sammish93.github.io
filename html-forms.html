@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>HTML Forms</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li class="current-page"><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 2</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="html-forms.html">HTML Forms</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>HTML Forms</h2>
+        <p>
+          Forms are a handy way of making your website more interactive. They can be beneficial for both the visitor of the site, and the web designer.
+          The basic premise behind a form is to collect data from the visitor via user input, and this can be done in a number of ways.
+        </p>
+        <h4>Common uses forms that we see on websites include:</h4>
+        <ul>
+          <li>Username and password input to log into an account</li>
+          <li>Comment sections on social media and forums</li>
+          <li>File uploads when sharing files via email or storage</li>
+          <li>Questionnaires, surveys, and multiple choice questions</li>
+        </ul>
+        <p>
+          Information sent via forms is sent to a separate server, and programming languages such as Java and PHP can be used to turn that raw data into 
+          something that can be used. In the case of a questionnaire sent out to thousands of recipients, the data can be analysed and statistics can be 
+          generated much faster than a human could process it all by hand, and visualisations such as graphs and word clouds can be generated. Information 
+          is also sometimes encrypted to ensure safety (e.g. password authentication).
+        </p>
+        <h3>Types of forms</h3>
+        <dl>
+          <dt>&lt;form&gt;</dt>
+            <dd>
+              The &lt;form&gt; element is used around input elements to contain them. The opening tag should contain the action attribute, which should 
+              specify an URL of a server that the input will communicate with. The attribute method should then be specified, with either 'get' or 'post'
+              as an attribute. 'Get' is generally used for data such as search engine results and simple retrieval of data, whereas 'post' is more secure, 
+              and should always be used when dealing with sensitive data.
+            </dd>
+          <dt>&lt;input&gt;</dt>
+            <dd>
+              The &lt;input&gt; element is the most common form, and the 'type' attribute is used to specify what type of form will be generated. Common 
+              values are 'text', 'textarea', 'password', 'checkbox', 'radio', and 'file'.
+            </dd>
+          <dt>&lt;select&gt;</dt>
+            <dd>
+              The &lt;select&gt; element is used for drop down boxes along with the &lt;option&gt; element. The 'value' attribute can be assigned a value
+              to specify a particular choice in the drop down list.
+            </dd>
+          <dt>&lt;fieldset&gt;</dt>
+            <dd>
+              The &lt;fieldset&gt; element, much like the &lt;form&gt; element, is used to contain different forms and controls. It's great for forms that 
+              can take up a large amount of space, or to group together a bunch of forms in one place.
+            </dd>
+        </dl>
+      </article>
+      <div>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="input-text" class="fieldset-text">Name: </label>
+          <input type="text" id="input-text">
+          <label for="email-text" class="fieldset-text">Email: </label>
+          <input type="email" id="email-text">
+          <label for="tlf-text" class="fieldset-text">Tlf. nr.: </label>
+          <input type="text" id="tlf-text">
+          <label for="comments-text" class="new-line fieldset-text">Additional Comments: </label>
+          <textarea name="comments" id="comments-text" rows="10"></textarea>
+        </fieldset>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

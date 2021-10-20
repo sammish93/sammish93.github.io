@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Media Types</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li class="current-page"><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a>Example</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="#">Example 1</a></li>
+            <li><a href="#">Example 2</a></li>
+            <li class="last-hover"><a href="#">Example 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <p>></p>
+          <li><a>Oblig 2</a></li>
+          <p>></p>
+          <li><a id="current-page-breadcrumb" href="media-types.html">Media Types</a></li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Media Types</h2>
+        <p>
+          Nowadays, a website can be accessed through a variety of different media types. In the early 90s it was typical to access a website through a desktop computer, 
+          and while that's still the case, technology has progressed significantly in the context of ways we access websites. Screens can range drastically in size and 
+          resolution; smart watches, to mobile phones, to tablets, to laptop and desktop screens, to 50+ inch TVs. There's also the print medium, with HTML and CSS being 
+          more commonplace to design a book layout to scale dynamically with e-readers and different sizes of paper sheets. Finally, there's screen readers that help those 
+          with visual or physical impairments to access the web where otherwise it would have been difficult. These screen readers make even greater use of semantic 
+          markup in the HTML code to convey subtle meanings and user cues which they may have otherwise missed.
+        </p>
+        <p>
+          CSS makes use of the @media query to specify a type of media (screen, print, speech), and to alter how the website is delivered to the visitor. Responsive design 
+          is now commonplace in web design, and the intention behind it is to deliver a functional site suited to each medium. Mobile phones will often have websites tailored 
+          around the fact that they have small screens, and side scrolling is generally avoided, and those with widescreen monitors can make use of the surplus of space 
+          they generally have. Targetting the print medium allows the designer to automatically generate page numbers, headers, and footnotes that change based on font sizing, 
+          and a subsequent increase in page count. An stripped-down version of the site could also be generated with less emphasis on colour and design, and more 
+          emphasis on content, thus making a printout economically friendly (ink-wise), and easy to read. Targetting the speech medium can allow more control of voice 
+          personalities and nuances (male/female, young/old, excited/nervous/sad), as well as supplying extra information that a person with a visual impairment may find 
+          useful - a more comprehensive description of a picture, or summarisation of a graph or other visual representation.
+        </p>
+        <p>
+          There are, however, downsides to using the @media query. First and foremost, it is extra work that the web designer needs to do, which can be time consuming and 
+          frustrating. Control over elements such as preferred screens and browsers are out of reach for the developer, and a need to accept user choice comes first. A website 
+          isn't always suitable for every medium, especially smart watches. Thus, it may be more suitable to supply such small screens with a different experience altogether, 
+          e.g. an RSS feed. When applied correctly, a comprehensive CSS sheet with many different @media queries and breakpoints can lead to a responsive website and less 
+          work in the future as new screen sizes, resolutions, and DPIs develop.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

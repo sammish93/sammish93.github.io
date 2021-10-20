@@ -1,0 +1,35 @@
+.article-btn {
+    padding: 0.1em 0.3em;
+    border-radius: 5px;
+    background-color: $pumpkin;
+    color: $dark-brown;
+    box-shadow: 0 4px 4px -4px $light-brown;
+
+    &:active {
+        background-color: $milk;
+        color: $pumpkin;
+    }
+}
+
+.search-icon {
+    background-color: $light-brown;
+    color: $milk;
+    border-radius: 5px 0 0 5px;
+    padding: 0.3em;
+    margin-right: 0.1em;
+    box-shadow: 0 4px 4px -4px $light-brown;
+}
+
+.search-text {
+    background-color: $pumpkin;
+    color: $dark-brown;
+    border-radius: 0 5px 5px 0;
+    padding: 0.3em;
+    margin-left: 0.1em;
+    box-shadow: 0 4px 4px -4px $light-brown;
+
+    &:active {
+        background-color: $milk;
+        color: $pumpkin;
+        }
+}    

@@ -1,0 +1,155 @@
+@media only screen and (max-width: 600px) {
+  
+    #ham, #ham-sub, #ham-sub2, #ham-sub3 {
+        flex-basis: 100%;
+        padding: 0;
+    }
+
+    #ham-btn {
+        margin: 0.5em;
+        font-size: 2em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    #navbar {
+        grid-area: nav;
+        position: sticky;
+        top: -10px;
+        border-radius: 10px;
+    }
+
+    .top-menu {
+        display: none;
+    }
+
+    nav ul {
+        display: block;
+        list-style: none;
+        justify-content: space-around;
+        margin: 0;
+
+        li {
+            
+            a {
+                padding: 1em;
+                display: block;
+
+            }
+
+            &:hover {
+                background-color: $pumpkin-light;
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: $pumpkin-light;
+            }
+        }
+    }
+
+    .current-page {
+        background-color: $pumpkin-light;
+    }
+
+    .dropdown-main {
+        display: none;
+        list-style: none;
+        justify-content: space-around;
+        padding: 0.5em 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #navbar {
+        grid-area: nav;
+        position: relative;
+        border-radius: 10px;
+
+        li {
+
+            a {
+                display: block;
+                padding: 1em;
+            }
+
+            &:hover {
+                background-color: $pumpkin-light;
+                cursor: pointer;
+            }
+        }
+
+        .last-hover {
+
+            border-radius: 0 0 10px 10px!important;
+        }
+    }
+
+    .current-page {
+        background-color: $pumpkin-light;
+    }
+
+    #ham-btn {
+        display: none;
+    }
+
+    .top-menu {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        margin: 0;
+
+        .dropdown-point:hover > ul, ul li ul:hover {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            z-index: 999;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* The following works with tab selection as well as tabindex=0 in the html code*/
+
+        .dropdown-point:focus > ul, ul li ul:focus {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            z-index: 999;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .dropdown-point:focus-within > ul, ul li ul:focus-within {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            z-index: 999;
+            border-radius: 0 0 10px 10px;
+        }
+        /*-------------------------------------------------------------------------------*/
+    }
+
+    .dropdown-main {
+        display: none;
+        background-image: linear-gradient($pumpkin 60%, $pumpkin-light);
+        box-shadow: 0 3px 3px $light-brown;
+    }
+}
+
+#navbar {
+    background-color: $pumpkin;
+    color: $dark-brown;
+    font-weight: bold;
+    box-shadow: 0 4px 4px -4px $light-brown;
+}
+
+.dropdown-main {
+    border-radius: 0 0 5px 5px;
+}

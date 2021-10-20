@@ -1,0 +1,82 @@
+@media only screen and (max-width: 1000px) {
+    body {  
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+        width: 70%;
+        margin: 0 auto 0 auto;
+        min-width: 300px;
+    }
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h3, h4, h5 {
+    margin: 1em 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+/*-------------------------*/
+
+/* (Coyier, 2015)
+      I used a modular scaling concept outlined by Coyier, C. on his website CSS-Tricks.com and incorporated it with some minor adjustments to this website with the aim
+      of making this site more responsive to scaling up and down with the font size. */
+
+html {
+    font-size: 16px;
+}
+
+/*-------------------------*/
+
+header {
+    font-size: 1.5rem;
+}
+
+nav {
+    font-size: 1rem;
+}
+
+main {
+    font-size: 1rem;
+}
+
+aside {
+    font-size: 1rem;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/*-------------------------*/
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+/*-------------------------*/
