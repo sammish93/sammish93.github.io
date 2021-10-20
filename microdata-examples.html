@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/62a878827f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <title>Microdata</title>
+</head>
+<body>
+  <div id="container-page">
+    <header id="page-header">
+      <h1>Webutvikling</h1>
+    </header>
+    <nav id="navbar">
+      <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
+      <ul id="ham" class="top-menu">
+        <li class="dropdown-point">
+          <a tabindex=0 href="index.html">Home</a>
+          <ul class="dropdown-main">
+            <li><a href="../oblig2/index.html">Oblig 2</a></li>
+            <li><a href="../oblig3/index.html">Oblig 3</a></li>
+            <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub()">
+          <a tabindex=0>Oblig 2</a>
+          <ul id="ham-sub" class="dropdown-main">
+            <li><a href="html-forms.html">HTML Forms</a></li>
+            <li><a href="media-types.html">Media Types</a></li>
+            <li class="last-hover"><a href="css-layouts.html">CSS Layouts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub2()">
+          <a tabindex=0>Oblig 3</a>
+          <ul id="ham-sub2" class="dropdown-main">
+            <li><a href="audio-video.html">Audio/Video</a></li>
+            <li><a href="responsive-design.html">Responsive Design</a></li>
+            <li class="last-hover"><a href="sass.html">SASS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-point" onclick="mobileMenuSub3()">
+          <a tabindex=0>Oblig 4</a>
+          <ul id="ham-sub3" class="dropdown-main">
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+            <li class="last-hover current-page"><a href="microdata.html">Microdata</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main id="article-column">
+      <nav id="breadcrumb" aria-label="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ol>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <span>></span>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Oblig 4</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <span>></span>
+          <li id="current-page-breadcrumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="microdata-examples.html" itemprop="item"><span itemprop="name">Microdata Examples</span></a>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <h2>Example 1</h2>
+        <div itemscope itemtype="https://schema.org/Person">
+          <span itemprop="jobTitle">Professor</span>
+          <span itemprop="name">Sam Davies</span>
+          <img src="res/Magical_Mouse_Shoulder_Friend.png" itemprop="image" alt="Photo of Sam Davies"/>
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Example Street 1</span>
+            <span itemprop="addressLocality">Example</span>,
+            <span itemprop="addressRegion">Example</span>
+            <span itemprop="postalCode">1234</span>
+          </div>
+          <span itemprop="telephone">(0047) 1234 5678</span>
+          <a href="mailto:samuelcd@hiof.no" itemprop="email">samuelcd@hiof.no</a>
+          Sam's home page:
+          <a href="index.html" itemprop="url">Home Page</a>
+          Graduate students:
+          <a href="index.html" itemprop="colleague">Small Graham</a>
+          <a href="index.html" itemprop="colleague">Large Kenneth</a>
+        </div>
+        <h2>Example 2</h2>
+        <div itemscope itemtype="https://schema.org/TouristAttraction">
+          <h3><span itemprop="name">Bude Tunnel</span></h3>
+          <div>
+            <span itemprop="description">It's a magnificent tunnel</span>
+          </div>
+          <div>
+            Website:
+            <a href="https://www.tripadvisor.com/Attraction_Review-g190804-d12865329-Reviews-Bude_Tunnel-Bude_Bude_Stratton_Cornwall_England.html" itemprop="url">https://www.tripadvisor.com/Attraction_Review-g190804-d12865329-Reviews-Bude_Tunnel-Bude_Bude_Stratton_Cornwall_England.html</a>
+          </div>
+          <div>
+            <meta itemprop="isAccessibleForFree" content="true"/>Ticket: access for free.
+          </div>
+        </div>
+        <h2>Example 3</h2>
+        <div class="event-wrapper" itemscope itemtype="https://schema.org/Event">
+          <div class="event-date" itemprop="startDate" content="2021-12-25T09:00">
+              Sat Dec 25
+          </div>
+          <div class="event-title" itemprop="name">
+              CANCELLED - Lovely christmas morning celebrations with Graham (Sadly, Graham is no longer in the christmas spirit)
+          </div>
+          <meta itemprop="eventStatus" content="https://schema.org/EventCancelled">
+          <div class="event-venue" itemprop="location" itemscope itemtype="https://schema.org/Place">
+              <span itemprop="name">Graham's Magical House</span>
+              <div class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                  <span itemprop="streetAddress">Example Address</span><br>
+                  <span itemprop="addressLocality">Example</span>, <span itemprop="addressRegion">Example</span> <span itemprop="postalCode">1234</span>
+              </div>
+          </div>
+          <div class="event-time">9:00AM</div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <div class="event-price" itemprop="price" content="200.00">£200.00</div>
+              <meta itemprop="priceCurrency" content="GBP">
+              <a itemprop="url" href="index.html">Tickets</a>
+          </div>
+        </div>
+        <h2>Example 4</h2>
+        <div itemscope itemtype="https://schema.org/CreativeWork">
+          <img itemprop="image" alt="Magical Mouse"
+          src="res/Magical_Mouse_Shoulder_Friend.png" />
+          <span itemprop="name">Magical Mouse</span>
+          by <span itemprop="author">Unknown</span>,
+          Rated:<span itemprop="contentRating">Mature</span>
+          </div>
+        <h2>Example 5</h2>
+        <div itemscope itemtype="https://schema.org/Organization">
+          <span itemprop="name">Høgskolen i Østfold</span>
+          Contact Details:
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            Main address:
+              <span itemprop="streetAddress">Example Address</span>
+              <span itemprop="postalCode">1234</span>
+              <span itemprop="addressLocality">Halden, Norway</span>
+            ,
+          </div>
+            Tel:<span itemprop="telephone">(0044) 1234 5678 </span>,
+            Fax:<span itemprop="faxNumber">(0044) 1234 5678 </span>,
+            E-mail: <span itemprop="email">hiof.no</span>
+        
+          Members:
+          - Magical Mouse
+          - Graham the Christmas Zealot
+          List of Alumni:
+         <span itemprop="alumni" itemscope itemtype="https://schema.org/Person">
+           <span itemprop="name">A toad that lives in a hole</span>
+         </span>,
+         <span itemprop="alumni" itemscope itemtype="https://schema.org/Person">
+           <span itemprop="name">copious amounts of frogspawn</span>
+         </span>,
+          History: Lots.
+        </div>
+        <figure class="article-figure">
+          <a href="res/schema-validator-1.png"><img class="fig-img" src="res/schema-validator-1.png" alt="Validating a snippet of code with microdata markup"></a>
+          <a href="res/schema-validator-2.png"><img class="fig-img" src="res/schema-validator-2.png" alt="Validating a snippet of code with microdata markup"></a>
+          <a href="res/schema-validator-3.png"><img class="fig-img" src="res/schema-validator-3.png" alt="Validating a snippet of code with microdata markup"></a>
+          <a href="res/schema-validator-4.png"><img class="fig-img" src="res/schema-validator-4.png" alt="Validating a snippet of code with microdata markup"></a>
+          <a href="res/schema-validator-5.png"><img class="fig-img" src="res/schema-validator-5.png" alt="Validating a snippet of code with microdata markup"></a>
+          <figcaption>
+            Several examples of validating microdata code, and how search engines interpret this data.
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+    <footer>
+      <p>
+        <i class="fas fa-signature"></i> Samuele Carlo Davies || <i class="far fa-envelope"></i> samuelcd@hiof.no || 
+        <i class="fas fa-graduation-cap"></i> Webutvikling 2021 || <i class="fas fa-list"></i> <a href="reference-list.html">Reference List</a>
+      </p>
+      <a id="top-btn" href="#page-header"><i class="fas fa-chevron-circle-up"></i> Top</a>
+    </footer>
+  </div>
+</body>
+</html>

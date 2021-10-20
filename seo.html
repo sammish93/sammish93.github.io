@@ -70,16 +70,43 @@
       </nav>
       <article>
         <h2>Search Engine Optimisation</h2>
-        <h3>Audio</h3>
         <p>
-          With HTML5 came the introduction of tags designed to free the web developer of their previous reliance on plugins and 
-          secondary websites. One of these elements is &lt;audio&gt;. The &lt;audio&gt; tag allows a web developer to inherently embed 
-          audio files hosted on their own server. This new element gives the developer a wide range of properties to be taken advantage 
-          of such as <i>'controls'</i> giving the embedded player more GUI options for the visitor of the site to use. Other properties 
-          include <i>'preload'</i>, allowing the audio file to load during the initial loading of the page, and <i>'autoplay'</i>. 
-          Autoplay has been widely used in the past but is now, however, looked down upon and viewed as little more than a nuisance 
-          apart from in very specific circumstances.
+          <b>NOTE:</b> Hosting my website on the itstud.hiof domain resulted in my website (subdomain) being inaccessible to crawlers and search results. To remedy this I hosted my site 
+          on github for the purposes of generating a sitemap and viewing search engine results. My sitemap and several URLs are, therefore, relate to the github domain.
         </p>
+        <h3>Sitemap and Crawlers</h3>
+        <a class="article-btn" href="sitemap.xml">View the sitemap of this website</a>
+        <p>
+          First things first, I set out to index my site using Google's Search Command. Since my website is completely new and there aren't any other websites linking to my site, I 
+          made use of the Google search console. Firstly, I registered myself as owner of the subdomain. I then proceeded to instruct Google search console to index my site. I supplied 
+          google with a sitemap generated via <a href="https://www.xml-sitemaps.com/">xml-sitemaps.com</a>, and crawlers were then instructed to index my site using the sitemap I provided. 
+        </p>
+        <figure class="article-figure">
+          <a href="res/seo-1.png"><img class="fig-img" src="res/seo-1.png" alt="A screenshot of Google search console verifying my website"></a>
+          <figcaption>
+            Google search console verifies my website, allowing for indexing, sitemap allocation, and crawling to commence. The search console also provides the owner with statistics 
+            relating to site visits, such as bounce rate, visitors, and visitor location.
+          </figcaption>
+        </figure>
+        <h3>Metadata</h3>
+        <p>
+          To increase hit rate and include my site on relevant searches I added additional metadata to supply search engines with more information they can make use of. By making use of 
+          the &lt;meta&gt; tag in the &lt;head&gt; of the HTML code, I can supply additional information about the website without changing the appearance or structure. Using the properties 
+          <b>name</b> and <b>content</b> I can create properties such as 'keywords', 'description', and 'author' with values. This information can then be used by search engines to 
+          generate a more accurate search result complete with a summary of the site. The sitemap can be used to also display additional subpages (this page is a subpage of index.html).
+        </p>
+        <meta name="keywords" content="html, css, media-types, responsive-design, sass">
+        <meta name="description" content="A site designed during a webutvikling course at Høgskolen i Østfold">
+        <meta name="author" content="Samuele Carlo Davies">
+        <h3>Microdata and Structured Data</h3>
+        <p>
+          Structured data such as microdata and JSON-LD allow search engines access to additional information about a web page, and subsequently process this data for use in search 
+          results. If appearing on relevant results is the goal, then the addition of structured data to a website will help immensely. One such example is a local plumbing business. 
+          With the addition of structured data, search engines can be supplied with crucial information such as geographic location. A local plumbing business may not need to appear 
+          on the front page of a generic search such as 'plumbing', but will absolutely appear on the front page of a more specific search such as 'plumbing in &lt;location&gt;'. 
+          Appearing on search results to a wide variety of people has little meaning to the local plumbing business if visitors to the web site don't contact and order a service.
+        </p>
+        <a class="article-btn" href="microdata.html">Read more about microdata</a>
       </article>
     </main>
     <footer>
