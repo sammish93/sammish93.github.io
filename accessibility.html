@@ -50,13 +50,19 @@
       </ul>
     </nav>
     <main id="article-column">
-      <nav id="breadcrumb" aria-label="breadcrumbs">
+      <nav id="breadcrumb" aria-label="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <p>></p>
-          <li><a>Oblig 4</a></li>
-          <p>></p>
-          <li><a id="current-page-breadcrumb" href="accessibility.html">Accessibility</a></li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <span>></span>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">Oblig 4</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <span>></span>
+          <li id="current-page-breadcrumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="accessibility.html" itemprop="item"><span itemprop="name">Accessibility</span></a>
+            <meta itemprop="position" content="3" />
+          </li>
         </ol>
       </nav>
       <article>
