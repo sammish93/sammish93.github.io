@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="A site designed during a web development course at Østfold University College. Topics include responsive design, accessibility, layouts, and others.">
   <meta name="author" content="Samuele Carlo Davies">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--opengraph metadata-->
   <meta property="og:title" content="SOME - Metadata for Social Media">
   <meta property="og:image" content="https://images.unsplash.com/photo-1506202687253-52e1b29d3527?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80">
   <meta property="og:url" content="https://sammish93.github.io/social-media.html">
   <meta property="og:type" content="article">
   <meta property="og:description" content="Social media, metadata, and sharing with the goal of creating attractive links to increase visits">
+  <!--twitter card metadata-->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="sammish1993">
   <meta name="twitter:title" content="SOME - Metadata for Social Media">
@@ -31,8 +33,9 @@
       <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
       <ul id="ham" class="top-menu">
         <li class="dropdown-point">
-          <a tabindex=0 href="index.html">Home</a>
+          <a tabindex=0>Home</a>
           <ul class="dropdown-main">
+            <li><a href="index.html">Home</a></li>
             <li><a href="../oblig2/index.html">Oblig 2</a></li>
             <li><a href="../oblig3/index.html">Oblig 3</a></li>
             <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
@@ -83,16 +86,34 @@
       </nav>
       <article>
         <h2>Social Media</h2>
-        <h3>Audio</h3>
         <p>
-          With HTML5 came the introduction of tags designed to free the web developer of their previous reliance on plugins and 
-          secondary websites. One of these elements is &lt;audio&gt;. The &lt;audio&gt; tag allows a web developer to inherently embed 
-          audio files hosted on their own server. This new element gives the developer a wide range of properties to be taken advantage 
-          of such as <i>'controls'</i> giving the embedded player more GUI options for the visitor of the site to use. Other properties 
-          include <i>'preload'</i>, allowing the audio file to load during the initial loading of the page, and <i>'autoplay'</i>. 
-          Autoplay has been widely used in the past but is now, however, looked down upon and viewed as little more than a nuisance 
-          apart from in very specific circumstances.
+          Social media is a hugely important part of how people interact in today's society. We can implement extra metadata in our code 
+          to help sites such as Facebook and Twitter generate rich objects on these same sites. Rich objects can incorporate additional information 
+          supplied via metadata to create user-friendly objects from links from other sites that don't look out of place in a typical social feed. 
+          Facebook makes use of the 'opengraph' protocol, while Twitter makes use of their own 'twitter cards' protocol, and uses opengraphs as a 
+          fallback when no twitter cards information is supplied. With correct implementation, rich objects can make links look more attractive, or 
+          supply more focused and relevant information to others, thus increasing web traffic and, furthermore, interactivity with a site.
         </p>
+        <p>
+          The syntax for both opengraph and twitter card metadata are in the form of key-value pairs. The main difference is that opengraph uses the 
+          key 'property', while twitter cards use the key 'name'. Both opengraph and twitter cards use the key 'content' to define the former. Examples 
+          of opengraph property values include 'og:title', 'og:description', 'og:image', 'og:url'. and 'og:type'. Examples of twitter card name values 
+          include 'twitter:card', 'twitter:site', 'twitter:image', 'twitter:description', and 'twitter:title'.
+        </p>
+        <p>
+          This particular web page has additional metadata that the aforementioned social networks can make use of, and here are examples of how 
+          they interpret this data:
+        </p>
+        <figure class="article-figure">
+          <a href="res/social-media-opengraph.jpg"><img class="fig-img" src="res/social-media-opengraph.jpg" alt="A rich object example using open graph metadata"></a>
+          <figcaption>
+            This is how Facebook interprets my opengraph metadata to create a rich result on a Facebook social feed.
+          </figcaption>
+          <a href="res/social-media-twittercards.jpg"><img class="fig-img" src="res/social-media-twittercards.jpg" alt="A rich object example using twitter cards metadata"></a>
+          <figcaption>
+            This is how Twitter interpets my twitter cards metadata to create a rich result on a Twitter feed.
+          </figcaption>
+        </figure>
       </article>
     </main>
     <footer>

@@ -18,8 +18,9 @@
       <i id="ham-btn" onclick="mobileMenu()" class="fas fa-bars"></i>
       <ul id="ham" class="top-menu">
         <li class="dropdown-point">
-          <a tabindex=0 href="index.html">Home</a>
+          <a tabindex=0>Home</a>
           <ul class="dropdown-main">
+            <li><a href="index.html">Home</a></li>
             <li><a href="../oblig2/index.html">Oblig 2</a></li>
             <li><a href="../oblig3/index.html">Oblig 3</a></li>
             <li class="last-hover"><a href="reference-list.html">Reference List</a></li>
@@ -71,15 +72,17 @@
       <article>
         <h2>Search Engine Optimisation</h2>
         <p>
-          <b>NOTE:</b> Hosting my website on the itstud.hiof domain resulted in my website (subdomain) being inaccessible to crawlers and search results. To remedy this I hosted my site 
+          <b>NOTE:</b> Hosting my website on the itstud.hiof domain resulted in my website (path) being inaccessible to crawlers and search results. To remedy this I hosted my site 
           on github for the purposes of generating a sitemap and viewing search engine results. My sitemap and several URLs are, therefore, relate to the github domain.
         </p>
         <h3>Sitemap and Crawlers</h3>
         <a class="article-btn" href="sitemap.xml">View the sitemap of this website</a>
         <p>
           First things first, I set out to index my site using Google's Search Command. Since my website is completely new and there aren't any other websites linking to my site, I 
-          made use of the Google search console. Firstly, I registered myself as owner of the subdomain. I then proceeded to instruct Google search console to index my site. I supplied 
+          made use of the Google search console. Firstly, I registered myself as owner of the URL. I then proceeded to instruct Google search console to index my site. I supplied 
           google with a sitemap generated via <a href="https://www.xml-sitemaps.com/">xml-sitemaps.com</a>, and crawlers were then instructed to index my site using the sitemap I provided. 
+          If my website hosted on the itstud.hiof domain was accessible to crawlers, I would create a robots.txt file restricting access to the 'Oblig 2', and 'Oblig 3' versions of my site, 
+          as they are only hosted for archive and reference purposes, and I wouldn't want them to be a landing page for a visitor as it would result in confusion, and they aren't optimised.
         </p>
         <figure class="article-figure">
           <a href="res/seo-1.png"><img class="fig-img" src="res/seo-1.png" alt="A screenshot of Google search console verifying my website"></a>
@@ -95,9 +98,15 @@
           <b>name</b> and <b>content</b> I can create properties such as 'keywords', 'description', and 'author' with values. This information can then be used by search engines to 
           generate a more accurate search result complete with a summary of the site. The sitemap can be used to also display additional subpages (this page is a subpage of index.html).
         </p>
-        <meta name="keywords" content="html, css, media-types, responsive-design, sass">
-        <meta name="description" content="A site designed during a webutvikling course at Høgskolen i Østfold">
-        <meta name="author" content="Samuele Carlo Davies">
+        <figure class="article-figure">
+          <a href="res/seo-meta-description.png"><img class="fig-img" src="res/seo-meta-description.png" alt="A screenshot of a Google result of my site, along with two versions of my metadata description."></a>
+          <figcaption>
+            After a few days of waiting for Google to index my site and for it to appear as a search result I finally got a glimpse of how Google perceives my site. Breadcrumbs were only on subpages, 
+            so I couldn't preview these results as Google was still processing my sitemap at the time of writing, but I wasn't happy with the 'snippet', or description. I went back to my code and 
+            edited it to be both more detailed and focused, while changing norwegian words to english. Even though I'm comfortable with the blend of 'norwenglish' on my site, I theorised that search 
+            engines would have a hard time distinguising the original meta description.
+          </figcaption>
+        </figure>
         <h3>Microdata and Structured Data</h3>
         <p>
           Structured data such as microdata and JSON-LD allow search engines access to additional information about a web page, and subsequently process this data for use in search 
@@ -107,6 +116,31 @@
           Appearing on search results to a wide variety of people has little meaning to the local plumbing business if visitors to the web site don't contact and order a service.
         </p>
         <a class="article-btn" href="microdata.html">Read more about microdata</a>
+        <h3>Other</h3>
+        <p>
+          Overall, I interpreted the guidelines regarding SEO as boiling down to the following points:
+        </p>
+        <ul>
+          <li>Optimise text, especially links and buttons, to be more specific</li>
+          <li>Ensure that the website is easy to navigate, with a hierarchical sitemap often being a suitable choice</li>
+          <li>Follow standard practices outlined by the W3</li>
+          <li>Incorporate semantic markup whenever possible</li>
+          <li>Ensure that the site is responsive, and works with both mobile devices and others</li>
+          <li>Add accessibility to the site wherever needed. Examples include tab navigation, and additional ARIA attributes</li>
+          <li>Ensure that the site loads fast, avoiding such things as large video and image files if unnecessary</li>
+        </ul>
+        <figure class="article-figure">
+          <a href="res/lighthouse-performance.png"><img class="fig-img" src="res/lighthouse-performance.png" alt="A performance test of my website using Google lighthouse"></a>
+          <figcaption>
+            After optimising my website I decided to conduct a final test using Google lighthouse. I got the following results. Note the SEO score is flagged in orange. 
+            I decided to investigate the reason.
+          </figcaption>
+          <a href="res/lighthouse-performance-seo.png"><img class="fig-img" src="res/lighthouse-performance-seo.png" alt="Flagged items relating to my website's SEO that could be potential problems"></a>
+          <figcaption>
+            The reason for a lower score was the lack of 'href' property in an &lt;a&gt; tag in my nav bar. I decided to leave it as it is, since my website isn't actually going to be released to the public, 
+            but if I was to remedy the problem I would either change the tag to &lt;span&gt;, or create a href value directed to new page containing only links to that specific dropdown menu.
+          </figcaption>
+        </figure>
       </article>
     </main>
     <footer>
